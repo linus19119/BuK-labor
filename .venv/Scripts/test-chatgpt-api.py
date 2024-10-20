@@ -4,6 +4,7 @@ import json
 
 api_key = sys.argv[1]
 api_url = 'https://api.openai.com/v1/chat/completions'
+prompt = sys.argv[2]
 
 # Set up the headers with the API key
 headers = {
@@ -13,10 +14,10 @@ headers = {
 
 # Define the messages for the conversation
 data = {
-    "model": "gpt-3.5-turbo",  # Specify model (gpt-3.5-turbo or gpt-4)
+    "model": "gpt-4o",  # Specify model (gpt-3.5-turbo or gpt-4)
     "messages": [
         {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "How can I use the ChatGPT REST API from Python?"}
+        {"role": "user", "content": prompt}
     ],
     "temperature": 0.7
 }
