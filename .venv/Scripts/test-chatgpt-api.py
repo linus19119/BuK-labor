@@ -29,6 +29,8 @@ response = requests.post(api_url, headers=headers, data=json.dumps(data))
 if response.status_code == 200:
     # Parse the response content
     result = response.json()
+    print("The entire result:")
+    print(result)
     # Extract and print the assistant's reply
     print(result['choices'][0]['message']['content'])
 else:
