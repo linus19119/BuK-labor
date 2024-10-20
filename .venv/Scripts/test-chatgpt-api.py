@@ -14,7 +14,7 @@ headers = {
 
 # Define the messages for the conversation
 data = {
-    "model": "gpt-4o",  # Specify model (gpt-3.5-turbo or gpt-4)
+    "model": "gpt-4",  # Specify model (gpt-3.5-turbo or gpt-4)
     "messages": [
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": prompt}
